@@ -1,0 +1,4 @@
+/public/*
+!/public/index.html
+!/public/404.html
+__pycache__/

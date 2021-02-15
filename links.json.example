@@ -1,0 +1,14 @@
+{
+  "a-simple-code": "http://google.com",
+  "also-possible": {
+    "link": "http://google.com"
+  },
+  "a-password-protected-link": {
+    "link": "http://google.com",
+    "password": "hello123"
+  },
+  "a-disabled-link": {
+    "disabled": true,
+    "link": "http://google.com"
+  }
+}

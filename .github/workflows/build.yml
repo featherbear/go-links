@@ -1,0 +1,26 @@
+name: build short links
+
+on:
+  push:
+    branches:
+    - master
+
+jobs:
+  build-deploy:
+    if: github.repository != 'featherbear/go-links'
+    runs-on: ubuntu-18.04
+    steps:
+    - uses: actions/checkout@master
+
+    - name: Install python packages
+      run: python3 -m pip install -r requirements.txt
+
+    - name: Generate short links
+      run: python3 generate.py
+
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v2.3.1
+      env:
+        PERSONAL_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        PUBLISH_BRANCH: gh-pages
+        PUBLISH_DIR: public

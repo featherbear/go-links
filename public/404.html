@@ -1,0 +1,133 @@
+<!DOCTYPE html
+><head>
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, user-scalable=no"
+  />
+  <title>Something went wrong...</title>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-CT45DQE3QQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-CT45DQE3QQ');
+  </script>
+  <style>
+    body {
+      margin: 0;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+        "Helvetica Neue", sans-serif;
+      cursor: default;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+    }
+    main,
+    section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+    main {
+      height: 100%;
+      background-color: white;
+    }
+    section span {
+      font-size: 24px;
+      font-weight: 500;
+      display: block;
+      border-bottom: 1px solid #eaeaea;
+      text-align: center;
+      padding-bottom: 20px;
+      width: 100px;
+    }
+    section p {
+      font-size: 14px;
+      font-weight: 400;
+    }
+    section span + p {
+      margin: 20px 0 0 0;
+    }
+    @media (min-width: 768px) {
+      section {
+        height: 40px;
+        flex-direction: row;
+      }
+      section span,
+      section p {
+        height: 100%;
+        line-height: 40px;
+      }
+      section span {
+        border-bottom: 0;
+        border-right: 1px solid #eaeaea;
+        padding: 0 20px 0 0;
+        width: auto;
+      }
+      section span + p {
+        margin: 0;
+        padding-left: 20px;
+      }
+    }
+
+    footer {
+      text-align: center;
+      position: absolute;
+      bottom: 50px;
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+      height: 100px;
+    }
+    
+    footer a {
+      color: #444444;
+      transition: color 0.5s;
+      text-decoration: none;
+    }
+    footer a:hover {
+      color: #141414;
+    }
+
+    body {
+      animation-name: invert;
+      animation-duration: 2s;
+      animation-delay: 1s;
+      animation-timing-function: ease-in-out;
+      animation-fill-mode: forwards;
+    }
+    @keyframes invert {
+        0% {
+            filter: invert(0);
+        }
+        100% {
+            filter: invert(1);
+        }   
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section>
+      <span>404</span>
+      <p>The requested link does not exist or has expired!</p>
+    </section>
+  </main>
+  <footer>
+    <a href="https://featherbear.cc"><img height="100%" src="https://featherbear.cc/blog/logo.png"/></a>
+    <div>Site by <a href="https://featherbear.cc">Andrew Wong</a></div>
+  </footer>
+</body>
