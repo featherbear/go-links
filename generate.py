@@ -23,13 +23,18 @@ with open("links.json", "r") as f:
         entry = data[CODE]
         if type(entry) is dict:
             if "disabled" in entry and entry["disabled"]:
+                # skip
                 continue
+            
+            content = ""
             if "password" in entry:
-                writeFile(CODE, template_password.replace(
-                    "$ENC_STRING", generate(entry["link"], entry["password"]).decode('utf-8'), 1))
-                continue
-
-            writeFile(CODE, template.replace("$REDIRECT_URL", entry["link"]))
-            continue
-
-        writeFile(CODE, template.replace("$REDIRECT_URL", entry))
+                content = template_password
+                content = content.replace("$ENC_STRING", generate(entry["link"], entry["password"]).decode('utf-8'), 1)
+            else:
+                content = template
+                content = content.replace("$REDIRECT_URL", entry["link"])
+            
+            content = content.replace("$INFO_STRING", entry.get("info", ""))
+            writeFile(CODE, content)
+        else:
+            writeFile(CODE, template.replace("$REDIRECT_URL", entry))

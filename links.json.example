@@ -7,6 +7,11 @@
     "link": "http://google.com",
     "password": "hello123"
   },
+  "a-password-protected-link-with-info": {
+    "link": "http://google.com",
+    "password": "hello123",
+    "info": "The password is `hello123`"
+  },
   "a-disabled-link": {
     "disabled": true,
     "link": "http://google.com"
