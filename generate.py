@@ -37,4 +37,4 @@ with open("links.json", "r") as f:
             content = content.replace("$INFO_STRING", entry.get("info", ""))
             writeFile(CODE, content)
         else:
-            writeFile(CODE, template.replace("$REDIRECT_URL", entry))
+            writeFile(CODE, template.replace("$INFO_STRING", "").replace("$REDIRECT_URL", entry))
